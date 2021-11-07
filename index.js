@@ -30,15 +30,15 @@ function getWinner() {
         },
     ]
 
-    if(competitors[0].points > competitors[1].points && competitors[0].points > competitors[2].points ) {
-        return `The winner is ${competitors[0].name} with ${competitors[0].points} points`
-    } else if (competitors[1].points > competitors[0].points && competitors[1].points > competitors[2].points){
-        return `The winner is ${competitors[1].name} with ${competitors[1].points} points`
-    } else if (competitors[2].points > competitors[0].points && competitors[2].points > competitors[1].points) {
-        return `The winner is ${competitors[2].name} with ${competitors[2].points} points`
-    } else {
-        return `Dead heat or error`
-    }
+   let max = Math.max(bob.points, garry.points, turbo.points)
+    let winner = '';
+    competitors.forEach(c => {
+        if(c.points === max) {
+            winner =  `The winner is ${c.name} with ${c.points} points`
+        }
+    })
+
+  return winner;
 
 }
 
@@ -65,6 +65,10 @@ const turbo = new Snail({
 const startBtn = document.querySelector('.start-btn')
 const resetBtn = document.querySelector('.reset-btn')
 const winner = document.querySelector('.winner')
+const bobPointsSpan = document.querySelector('.bob-points')
+const garryPointsSpan = document.querySelector('.garry-points')
+const turboPointsSpan = document.querySelector('.turbo-points')
+
 
 startBtn.addEventListener('click', () => {
     garry.move()
