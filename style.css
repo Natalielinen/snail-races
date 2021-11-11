@@ -2,6 +2,7 @@
 body {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 .stadium {
     display: flex;
@@ -57,7 +58,6 @@ body {
 @media (min-width: 992px) and (max-width: 1199px) {
     .track {
         height: 24%;
-
     }
     .track img {
         height: 110px;
@@ -78,18 +78,24 @@ body {
 
 }
 @media (max-width: 767px) {
-
+    .track {
+        height: 26%;
+    }
+    .track img {
+        height: 80px;
+    }
 }
 
 @media (max-width: 479px) {
     .track {
-        height: 24%;
+        height: 26%;
     }
     .track img {
         height: 80px;
     }
     .info {
-        height: 40px;
+        margin-top: 5px;
+        height: 50px;
         display: flex;
         justify-content: flex-start;
         flex-direction: column;
