@@ -1,9 +1,11 @@
 class Snail {
     constructor(options) {
+        this.imgWidth = options.imgWidth
+        this.width = document.documentElement.clientWidth - this.imgWidth
         this.name = options.name
         this.age = options.age
         this.mainColor = options.mainColor
-        this.points = Math.round(Math.random() * 1000)
+        this.points = Math.round(Math.random() * this.width)
         this.selector = document.querySelector(`#${options.selector}`)
     }
 
@@ -16,21 +18,24 @@ const garry = new Snail({
     name: 'Garry',
     age: 5,
     mainColor: 'pink',
-    selector: 'garry'
+    selector: 'garry',
+    imgWidth: document.getElementById('garry').clientWidth
 })
 
 const bob = new Snail({
     name: 'Bob',
     age: 3,
     mainColor: 'brown',
-    selector: 'bob'
+    selector: 'bob',
+    imgWidth: document.getElementById('bob').clientWidth
 })
 
 const turbo = new Snail({
     name: 'Turbo',
     age: 4,
     mainColor: 'blue',
-    selector: 'turbo'
+    selector: 'turbo',
+    imgWidth: document.getElementById('turbo').clientWidth
 })
 
 function getWinner() {
@@ -48,17 +53,14 @@ function getWinner() {
             points: turbo.points
         },
     ]
-
     let max = Math.max(bob.points, garry.points, turbo.points)
-    let winner = '';
+    let winner = ''
     competitors.forEach(c => {
         if (c.points === max) {
             winner = `The winner is ${c.name} with ${c.points} points`
         }
     })
-
-    return winner;
-
+    return winner
 }
 
 const startBtn = document.querySelector('.start-btn')

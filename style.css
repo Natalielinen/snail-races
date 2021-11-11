@@ -1,3 +1,4 @@
+
 body {
     margin: 0;
     padding: 0;
@@ -12,6 +13,8 @@ body {
 }
 
 .track {
+    display: flex;
+    align-items: center;
     width: 100%;
     padding: 1% 0;
     height: 26%;
@@ -39,4 +42,63 @@ body {
 
 .text-cont {
     width: 70%;
+}
+
+@media (min-width: 1200px) {
+    .track {
+        height: 24%;
+
+    }
+    .track img {
+        height: 110px;
+    }
+
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+    .track {
+        height: 24%;
+
+    }
+    .track img {
+        height: 110px;
+    }
+    .info {
+        height: 60px;
+    }
+
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    .track {
+        height: 24%;
+
+    }
+    .track img {
+        height: 100px;
+    }
+
+}
+@media (max-width: 767px) {
+
+}
+
+@media (max-width: 479px) {
+    .track {
+        height: 24%;
+    }
+    .track img {
+        height: 80px;
+    }
+    .info {
+        height: 40px;
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+    }
+
+    .winner {
+        width: 300px;
+        margin: 3px 0;
+    }
 }
