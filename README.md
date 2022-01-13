@@ -1,12 +1,2 @@
-Улиточьи гонки
-
-Мини-игра созданная для дочери и в качестве практики JS классов
-
---------------------------------------------------------------------------------------------------
-
-Snail races
-
-Mini-game created for my daughter and as a practice of JS classes
-
-[snail races](https://natalielinen.github.io/snail-races/)
+<h1 align="center">Гонки улиток</h1>
 
