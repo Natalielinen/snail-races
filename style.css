@@ -8,7 +8,7 @@ body {
     padding: 0;
 }
 .info {
-    min-height: 56px;
+    min-height: 90px;
     padding: 2vh;
     display: flex;
     flex-direction: column;
@@ -17,6 +17,9 @@ body {
 .stadium {
     width: 100%;
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 .track {
@@ -32,3 +35,15 @@ body {
     transition: all 1s ease-in-out;
 }
 
+.start-btn, .reset-btn {
+    padding: 5px 10px;
+    border: 1px solid #cecece;
+    background-color: white;
+    outline: none;
+    cursor: pointer;
+}
+
+.start-btn:hover:not(:disabled), .reset-btn:hover:not(:disabled) {
+    opacity: 0.7;
+    box-shadow: 2px 2px 6px 1px #cecece;
+}
